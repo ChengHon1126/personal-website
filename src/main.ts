@@ -57,7 +57,7 @@ highlightIfAtBottom();
 
 // 聯絡表單：送到 API Gateway，由後端 Lambda 呼叫 SES 寄信
 // TODO: 換成實際部署的 API Gateway / Lambda Function URL
-const CONTACT_API_URL = "https://YOUR_API_ID.execute-api.YOUR_REGION.amazonaws.com/prod/contact";
+const CONTACT_API_URL = "https://b2z16m5mwd.execute-api.ap-northeast-1.amazonaws.com";
 
 const envelopeCard = document.querySelector<HTMLElement>("#envelope-card");
 const envelopeCardBody = document.querySelector<HTMLElement>(".envelope-card-body");
@@ -100,19 +100,23 @@ contactForm?.querySelectorAll("input, textarea").forEach((field) => {
 
 contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
-  if (!contactForm.checkValidity()) {
+
+  const formData = new FormData(contactForm);
+  const payload = {
+    name: String(formData.get("name") ?? "").trim(),
+    email: String(formData.get("email") ?? "").trim(),
+    subject: String(formData.get("subject") ?? "").trim(),
+    message: String(formData.get("message") ?? "").trim(),
+  };
+
+  // required 屬性只檢查長度是否為 0，不會擋掉只打空白鍵的內容，這裡額外檢查 trim 過的值
+  const hasBlankField = !payload.name || !payload.email || !payload.subject || !payload.message;
+
+  if (!contactForm.checkValidity() || hasBlankField) {
     contactForm.querySelectorAll("input, textarea").forEach((field) => field.setAttribute("data-touched", "true"));
     setContactStatus("請確認欄位都已正確填寫。", "error");
     return;
   }
-
-  const formData = new FormData(contactForm);
-  const payload = {
-    name: String(formData.get("name") ?? ""),
-    email: String(formData.get("email") ?? ""),
-    subject: String(formData.get("subject") ?? ""),
-    message: String(formData.get("message") ?? ""),
-  };
 
   if (contactSubmit) contactSubmit.disabled = true;
   setContactStatus("傳送中...");

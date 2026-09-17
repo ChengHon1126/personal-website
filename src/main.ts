@@ -82,6 +82,13 @@ const sealEnvelope = (): void => {
   void envelopeCardBody.offsetHeight; // 強制 reflow，讓上面設定的高度先生效再過渡
   envelopeCard.classList.add("sent");
   envelopeCardBody.style.height = `${successHeight}px`;
+
+  // 過渡動畫跑完後把寫死的高度放掉，改回自動高度
+  // （.envelope-card.sent .contact-form 已經用 position: absolute 移出版面計算，
+  //   所以放掉高度後只會依 .envelope-success 的實際大小自動調整，不會跳回表單的高度）
+  window.setTimeout(() => {
+    envelopeCardBody.style.height = "";
+  }, 500);
 };
 
 const setContactStatus = (text: string, state?: "success" | "error"): void => {

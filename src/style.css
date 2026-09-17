@@ -530,6 +530,7 @@ p {
 }
 
 .contact-form {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -628,6 +629,16 @@ p {
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+/* 蜜罐欄位：對一般使用者隱藏，但保留在 DOM 中讓機器人填寫，藉此判斷是否為垃圾訊息 */
+.form-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .form-actions .btn:disabled {

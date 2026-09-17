@@ -102,15 +102,24 @@ contactForm?.addEventListener("submit", async (event) => {
   event.preventDefault();
 
   const formData = new FormData(contactForm);
+
+  // 蜜罐欄位：一般使用者看不到也不會填，機器人會直接找 input 填值，填了就當作垃圾訊息偷偷擋掉
+  const honeypot = String(formData.get("website") ?? "").trim();
+  if (honeypot) {
+    setContactStatus("訊息已送出，我會盡快回覆你！", "success");
+    sealEnvelope();
+    contactForm.reset();
+    return;
+  }
+
   const payload = {
     name: String(formData.get("name") ?? "").trim(),
     email: String(formData.get("email") ?? "").trim(),
-    subject: String(formData.get("subject") ?? "").trim(),
     message: String(formData.get("message") ?? "").trim(),
   };
 
   // required 屬性只檢查長度是否為 0，不會擋掉只打空白鍵的內容，這裡額外檢查 trim 過的值
-  const hasBlankField = !payload.name || !payload.email || !payload.subject || !payload.message;
+  const hasBlankField = !payload.name || !payload.email || !payload.message;
 
   if (!contactForm.checkValidity() || hasBlankField) {
     contactForm.querySelectorAll("input, textarea").forEach((field) => field.setAttribute("data-touched", "true"));

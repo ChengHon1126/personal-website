@@ -270,6 +270,10 @@
             <div class="envelope-flap" aria-hidden="true"></div>
             <div class="envelope-card-body">
               <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-field form-honeypot" aria-hidden="true">
+                  <label for="contact-website">網站</label>
+                  <input type="text" id="contact-website" name="website" tabindex="-1" autocomplete="off" />
+                </div>
                 <div class="form-row">
                   <div class="form-field">
                     <label for="contact-name">姓名</label>
@@ -279,10 +283,6 @@
                     <label for="contact-email">Email</label>
                     <input type="email" id="contact-email" name="email" autocomplete="email" required />
                   </div>
-                </div>
-                <div class="form-field">
-                  <label for="contact-subject">主旨</label>
-                  <input type="text" id="contact-subject" name="subject" required />
                 </div>
                 <div class="form-field">
                   <label for="contact-message">內容</label>
@@ -311,6 +311,8 @@
       <p>© 2026 洪梓誠</p>
       <div class="footer-links">
         <a href="mailto:lkmd555@gmail.com">lkmd555@gmail.com</a>
+        <span aria-hidden="true">·</span>
+        <a href="tel:0923373895">0923-373-895</a>
         <span aria-hidden="true">·</span>
         <a href="https://github.com/ChengHon1126" target="_blank" rel="noreferrer">GitHub</a>
       </div>

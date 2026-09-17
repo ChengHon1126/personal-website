@@ -30,7 +30,7 @@ jobs:
           aws-region: ap-northeast-1
 
       - name: Upload build to S3
-        run: aws s3 cp dist/index.html s3://achengtw.com/dist/index.html
+        run: aws s3 cp dist/index.html s3://achengtw.com/index.html
 
       - name: Invalidate CloudFront cache
         run: |

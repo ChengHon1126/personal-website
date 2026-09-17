@@ -57,7 +57,7 @@ highlightIfAtBottom();
 
 // 聯絡表單：送到 API Gateway，由後端 Lambda 呼叫 SES 寄信
 // TODO: 換成實際部署的 API Gateway / Lambda Function URL
-const CONTACT_API_URL = "https://b2z16m5mwd.execute-api.ap-northeast-1.amazonaws.com";
+const CONTACT_API_URL = "https://b2z16m5mwd.execute-api.ap-northeast-1.amazonaws.com/contact";
 
 const envelopeCard = document.querySelector<HTMLElement>("#envelope-card");
 const envelopeCardBody = document.querySelector<HTMLElement>(".envelope-card-body");

@@ -552,6 +552,7 @@ p {
   padding: 20px 0;
   opacity: 0;
   transform: translateY(8px);
+  pointer-events: none;
   transition: opacity 0.4s ease 0.45s, transform 0.4s ease 0.45s;
 }
 

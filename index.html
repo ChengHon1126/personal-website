@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>洪梓誠 | 全端工程師</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta
+      name="description"
+      content="洪梓誠 — 3 年 Laravel 全端開發經驗，專注於企業內部系統與流程優化。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/style.css" />
+  </head>
+  <body>
+    <!-- Nav -->
+    <header class="site-nav">
+      <div class="nav-inner">
+        <a href="#top" class="nav-brand">洪梓誠</a>
+        <nav class="nav-links" id="nav-links">
+          <a href="#about" data-nav>關於我</a>
+          <a href="#skills" data-nav>專長</a>
+          <a href="#projects" data-nav>代表作品</a>
+          <a href="#experience" data-nav>經歷</a>
+          <a href="#contact" data-nav>聯絡</a>
+        </nav>
+        <button class="nav-toggle" id="nav-toggle" aria-label="開啟選單" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="hero-eyebrow">全端工程師・專注企業內部系統</p>
+            <h1>把複雜的企業流程，<br />變成穩定好維護的系統。</h1>
+            <p class="hero-lede">
+              過去 3 年使用 PHP / Laravel，將複雜的簽核、獎金與營運流程，整理成穩定、容易維護的系統。
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">查看代表作品</a>
+              <a href="#contact" class="btn btn-ghost">聯絡我</a>
+            </div>
+          </div>
+          <div class="hero-diagram" aria-hidden="true">
+            <svg viewBox="0 0 360 320" xmlns="http://www.w3.org/2000/svg" id="flow-svg">
+              <g class="grid">
+                <line x1="0" y1="40" x2="360" y2="40" />
+                <line x1="0" y1="120" x2="360" y2="120" />
+                <line x1="0" y1="200" x2="360" y2="200" />
+                <line x1="0" y1="280" x2="360" y2="280" />
+              </g>
+              <path
+                id="flow-path"
+                class="flow-path"
+                d="M60,60 L60,140 L180,140 L180,220 L300,220 L300,260"
+                fill="none"
+              />
+              <g class="flow-node" transform="translate(60,60)">
+                <rect x="-42" y="-20" width="84" height="40" rx="4" />
+                <text x="0" y="5" text-anchor="middle">提交申請</text>
+              </g>
+              <g class="flow-node" transform="translate(180,140)">
+                <rect x="-42" y="-20" width="84" height="40" rx="4" />
+                <text x="0" y="5" text-anchor="middle">審核 / RBAC</text>
+              </g>
+              <g class="flow-node" transform="translate(180,220)">
+                <rect x="-42" y="-20" width="84" height="40" rx="4" />
+                <text x="0" y="5" text-anchor="middle">Queue 通知</text>
+              </g>
+              <g class="flow-node flow-node-final" transform="translate(300,260)">
+                <rect x="-42" y="-20" width="84" height="40" rx="4" />
+                <text x="0" y="5" text-anchor="middle">核准完成</text>
+              </g>
+            </svg>
+            <p class="diagram-caption">合約簽核流程 · 工作流引擎示意</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- About -->
+      <section id="about" class="section">
+        <div class="section-inner narrow">
+          <h2 class="section-heading">關於我</h2>
+          <p class="section-text">
+            你好，我是洪梓誠，畢業於亞洲大學資訊工程學系。過去 3 年在永佳捷科技擔任全端工程師，
+            獨立負責公司內部 OA 系統的開發與維護，將模糊的業務需求整理成清楚、可靠的系統規格。
+            我重視的不只是把功能完成，也希望讓系統容易理解、維護，並真正改善團隊的工作流程。
+          </p>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section section-alt">
+        <div class="section-inner">
+          <h2 class="section-heading">專長</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3>前端</h3>
+              <div class="tag-row">
+                <span class="tag">HTML</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JavaScript</span>
+                <span class="tag">Alpine.js</span>
+                <span class="tag">Vue.js</span>
+                <span class="tag">Tailwind CSS</span>
+                <span class="tag">jQuery</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3>後端</h3>
+              <div class="tag-row">
+                <span class="tag">PHP</span>
+                <span class="tag">Laravel</span>
+                <span class="tag">Eloquent ORM</span>
+                <span class="tag">RESTful API</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">MS SQL</span>
+                <span class="tag">Redis</span>
+              </div>
+            </div>
+            <div class="skill-group">
+              <h3>雲端 / 工具</h3>
+              <div class="tag-row">
+                <span class="tag">AWS EC2</span>
+                <span class="tag">AWS S3</span>
+                <span class="tag">Git</span>
+                <span class="tag">Git Flow</span>
+                <span class="tag">Jenkins</span>
+                <span class="tag">GitHub</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects -->
+      <section id="projects" class="section">
+        <div class="section-inner">
+          <h2 class="section-heading">代表作品</h2>
+          <div class="project-list">
+            <article class="project-card">
+              <div class="project-card-header">
+                <h3>合約管理系統</h3>
+                <span class="project-tag-mono">#Laravel #Alpine.js #RBAC #Queue</span>
+              </div>
+              <div class="project-body">
+                <div class="project-col">
+                  <p class="project-label">挑戰</p>
+                  <p>企業合約簽核流程繁瑣，權限控管問題導致審批卡關。</p>
+                </div>
+                <div class="project-col">
+                  <p class="project-label">做法</p>
+                  <p>
+                    設計彈性工作流（Workflow）引擎，實作嚴格的 Role-Based Access Control
+                    權限管理；前端以 Alpine.js 處理動態欄位與彈窗互動，後端以非同步 Queue 處理通知。
+                  </p>
+                </div>
+                <div class="project-col project-result">
+                  <p class="project-label">成果</p>
+                  <p class="project-stat">縮短 <span>70–80%</span> 審批時間</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card">
+              <div class="project-card-header">
+                <h3>人資考核與獎金計算系統</h3>
+                <span class="project-tag-mono">#Laravel #MySQL #DB Transactions</span>
+              </div>
+              <div class="project-body">
+                <div class="project-col">
+                  <p class="project-label">挑戰</p>
+                  <p>績效考核指標多變、獎金計算公式複雜，人工核對耗時且容易出錯。</p>
+                </div>
+                <div class="project-col">
+                  <p class="project-label">做法</p>
+                  <p>
+                    用設計模式重構獎金計算模組，把公式抽離成可配置組件，並導入 Database
+                    Transactions 確保金流計算的精確性。
+                  </p>
+                </div>
+                <div class="project-col project-result">
+                  <p class="project-label">成果</p>
+                  <p class="project-stat">維護成本降低 <span>60–70%</span></p>
+                  <p class="project-substat">3 天人工核對 → 30 分鐘自動完成</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="project-card project-card-compact">
+              <div class="project-card-header">
+                <h3>倉儲管理系統</h3>
+                <span class="project-tag-mono">#Laravel #MySQL</span>
+              </div>
+              <p class="section-text">
+                以 Laravel 開發倉儲進出貨管理系統，處理庫存異動與流程紀錄，累積企業系統開發的基礎經驗。
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section id="experience" class="section section-alt">
+        <div class="section-inner narrow">
+          <h2 class="section-heading">工作經歷</h2>
+          <ol class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-marker">01</div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <h3>軟體工程師（全端）</h3>
+                  <span class="timeline-date">2023/12 – 2026/6 · 2 年 7 個月</span>
+                </div>
+                <p class="timeline-org">永佳捷科技股份有限公司</p>
+                <p class="section-text">
+                  從零建置公司內部 OA 系統，負責合約、獎金計算與營運流程等核心功能，並將原生 PHP
+                  系統逐步轉換為 Laravel，建立 Git 版本控制與 Jenkins 自動部署流程。
+                </p>
+              </div>
+            </li>
+            <li class="timeline-item">
+              <div class="timeline-marker">02</div>
+              <div class="timeline-content">
+                <div class="timeline-meta">
+                  <h3>軟體工程師</h3>
+                  <span class="timeline-date">2023/8 – 2023/12 · 5 個月</span>
+                </div>
+                <p class="timeline-org">穩達商貿運籌股份有限公司</p>
+                <p class="section-text">
+                  負責既有系統維護與功能優化，釐清使用者操作問題，修正流程異常並提出改善建議。
+                </p>
+              </div>
+            </li>
+          </ol>
+
+          <div class="edu-cert-row">
+            <div class="edu-cert-block">
+              <p class="project-label">學歷</p>
+              <p class="edu-cert-title">亞洲大學</p>
+              <p class="section-text-tight">資訊工程學系</p>
+            </div>
+            <div class="edu-cert-block">
+              <p class="project-label">認證</p>
+              <p class="edu-cert-title">AWS Certified Cloud Practitioner</p>
+              <p class="section-text-tight">2026/09 – 2029/09</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section id="contact" class="section contact-section">
+        <div class="section-inner narrow">
+          <h2 class="section-heading">聯絡我</h2>
+          <p class="section-text">
+            目前尋找全端或後端工程師機會，也對遠端工作保持開放。歡迎填寫下方表單與我聯絡，或參考頁尾的其他聯絡方式。
+          </p>
+
+          <div class="envelope-card" id="envelope-card">
+            <div class="envelope-flap" aria-hidden="true"></div>
+            <div class="envelope-card-body">
+              <form class="contact-form" id="contact-form" novalidate>
+                <div class="form-row">
+                  <div class="form-field">
+                    <label for="contact-name">姓名</label>
+                    <input type="text" id="contact-name" name="name" autocomplete="name" required />
+                  </div>
+                  <div class="form-field">
+                    <label for="contact-email">Email</label>
+                    <input type="email" id="contact-email" name="email" autocomplete="email" required />
+                  </div>
+                </div>
+                <div class="form-field">
+                  <label for="contact-subject">主旨</label>
+                  <input type="text" id="contact-subject" name="subject" required />
+                </div>
+                <div class="form-field">
+                  <label for="contact-message">內容</label>
+                  <textarea id="contact-message" name="message" rows="6" required></textarea>
+                </div>
+                <div class="form-actions">
+                  <button type="submit" class="btn btn-primary" id="contact-submit">送出訊息</button>
+                  <p class="form-status" id="contact-status" role="status" aria-live="polite"></p>
+                </div>
+              </form>
+
+              <div class="envelope-success" aria-hidden="true">
+                <svg class="envelope-success-badge" viewBox="0 0 48 48">
+                  <circle cx="24" cy="24" r="22" />
+                  <path d="M14,25 L21,32 L34,17" fill="none" />
+                </svg>
+                <p>訊息已送出，我會盡快回覆你！</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>© 2026 洪梓誠</p>
+      <div class="footer-links">
+        <a href="mailto:lkmd555@gmail.com">lkmd555@gmail.com</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://github.com/ChengHon1126" target="_blank" rel="noreferrer">GitHub</a>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
